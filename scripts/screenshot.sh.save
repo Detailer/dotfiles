@@ -1,0 +1,3 @@
+scrot -e 'mv $f ~/Pictures/Screenshots'
+sleep 0.5s
+notify-send "Screenshot Captured.+"
