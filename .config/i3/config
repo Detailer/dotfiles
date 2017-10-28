@@ -320,8 +320,8 @@ exec_always LANG=en_us.UTF-8
 #exec --no-startup-id ~/scripts/blurme
 
 bindsym --release Print exec ~/scripts/screenshot.sh
-bindcode $mod+86 exec "pactl set-sink-volume 0 +5%"
-bindcode $mod+82 exec "pactl set-sink-volume 0 -5%"
+bindcode $mod+86 exec "pactl set-sink-volume 1 +5%"
+bindcode $mod+82 exec "pactl set-sink-volume 1 -5%"
 bindsym $mod+Shift+X exec ~/scripts/lock.sh
 
 # Spotify related key bindings
