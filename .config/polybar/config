@@ -52,14 +52,15 @@ module-margin-left = 2.5
 module-margin-right = 2.5
 
 font-0 = "FontAwesome:fontformat=truetype:size=9;1"
-font-1 = "SFNS Display:fontformat=truetype:size=9:antialias=true;1"
+font-1 = "SFNS Display:fontformat=truetype:size=10:antialias=true;1"
+#font-1 = "Segoe UI:fontformat=truetype:size=10:antialias=true;1"
 font-2 = "Material Icons:fontformat=truetype:size=9;1"
 font-3 = "Material Design Icons:fontformat=truetype:size=9;1"
 #font-2 = Hack:fontformat=truetype:size=9;1
 
 modules-left = i3 xwindow 
 modules-center = music mpd
-modules-right =  wired-network volume powermenu date
+modules-right =  wired-network memory volume powermenu date
 
 tray-position = right
 tray-padding = 3
@@ -282,6 +283,12 @@ label-connected-font = 4
 label-disconnected-font = 4
 label-disconnected-foreground = #66
 
+[module/memory]
+type = internal/memory
+label =   %percentage_used%%
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
 
 
 #[module/mpd]
