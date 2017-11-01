@@ -51,10 +51,11 @@ padding-right = 3
 module-margin-left = 2.5
 module-margin-right = 2.5
 
-font-2 = San Francisco Display:fontformat=truetype:size=9;1
-font-3 = Hack:fontformat=truetype:size=9;1
-font-0 = FontAwesome:fontformat=truetype:size=9;1
-font-1 = Material Design Icons:pixelsize=12;1
+font-0 = "FontAwesome:fontformat=truetype:size=9;1"
+font-1 = "SFNS Display:fontformat=truetype:size=9:antialias=true;1"
+font-2 = "Material Icons:fontformat=truetype:size=9;1"
+font-3 = "Material Design Icons:fontformat=truetype:size=9;1"
+#font-2 = Hack:fontformat=truetype:size=9;1
 
 modules-left = i3 xwindow 
 modules-center = music mpd
@@ -75,9 +76,10 @@ override-redirect = false
 [module/i3]
 type = internal/i3
 
-ws-icon-0 = 1;
+#ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-3 = 3;
+ws-icon-3 =  3;
 ws-icon-2 = 10;
 ws-icon-default = 
 
@@ -85,13 +87,17 @@ label-mode = %mode%
 label-mode-padding = 2
 label-mode-background = ${colors.colour_1}
 
-label-focused = %index%:%icon%
+#label-focused = %index%:%icon%
+label-focused = 
+#label-focused = %index%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.colour_4}
+#label-focused-underline = ${colors.colour_4}
 label-focused-padding = 2
 
-label-unfocused = %index%:%icon%
+#label-unfocused = %index%:%icon%
+label-unfocused =  
+#label-unfocused = %index%
 label-unfocused-padding = 2
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.u_foreground}
@@ -100,10 +106,11 @@ label-visible = %index%;%icon%
 label-visible-underline = ${colors.foreground}
 label-visible-padding = 3
 
-label-urgent = %index%:%icon%
-label-urgent-foreground = ${colors.foreground}
+#label-urgent = %index%:%icon%
+label-urgent = 
+label-urgent-foreground = ${colors.colour_3}
 label-urgent-background = ${colors.background}
-label-urgent-underline = ${colors.colour_3}
+#label-urgent-underline = ${colors.colour_3}
 label-urgent-padding = 2
 
 [module/xwindow]
@@ -133,19 +140,23 @@ type = internal/volume
 
 format-muted-background = ${colors.background}
 format-volume-background = ${colors.background}
-format-volume =   <label-volume> <bar-volume>
-label-muted = Muted
+format-muted-foreground = #66
+format-volume =   <label-volume> 
+label-muted-font = 3
+label-muted =  
 
-bar-volume-width = 15
-bar-volume-foreground = ${colors.foreground}
-bar-volume-gradient = false
-bar-volume-indicator= 
-bar-volume-indicator-font = 1
-bar-volume-fill = ─
-bar-volume-fill-font = 1
-bar-volume-empty = ─
-bar-volume-empty-font = 1
-bar-volume-empty-foreground = ${colors.colour_2}
+
+
+#bar-volume-width = 15
+#bar-volume-foreground = ${colors.foreground}
+#bar-volume-gradient = false
+#bar-volume-indicator= 
+#bar-volume-indicator-font = 1
+#bar-volume-fill = ─
+#bar-volume-fill-font = 1
+#bar-volume-empty = ─
+#bar-volume-empty-font = 1
+#bar-volume-empty-foreground = ${colors.colour_2}
 
 [module/temperature]
 type = internal/temperature
@@ -164,10 +175,10 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = ⚡ Power
+label-open =  Power
 label-open-background = ${colors.background}
 label-open-foreground = ${colors.foreground}
-label-close = ⚡
+label-close = 
 label-close-background = ${colors.background}
 label-close-foreground = ${colors.foreground}
 label-separator = " "
@@ -264,10 +275,11 @@ type = internal/network
 interface = eno1
 interval = 2.0
 #label-connected = 
-label-connected-font = 2
-label-disconnected-font = 2
+
 label-connected = 
 label-disconnected = 
+label-connected-font = 4
+label-disconnected-font = 4
 label-disconnected-foreground = #66
 
 

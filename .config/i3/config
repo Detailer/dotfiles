@@ -204,7 +204,7 @@ bindsym $mod+r mode "resize"
 
 #set $bg-color 	         #455a64
 set $bg-color 	         #373b41
-#set $inactive-bg-color   #2f343f
+#set $inactive-bg-color   1#2f343f
 set $inactive-bg-color   #282a2e
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -257,7 +257,7 @@ bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
 
 #ALSA restore , when voulume doesnt work
-bindsym $mod+Shift+Ctrl+v exec alsactl restore 
+#bindsym $mod+Shift+Ctrl+v exec alsactl restore 
 
 #CHANGE GAP SIZE
 
