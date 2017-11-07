@@ -235,7 +235,8 @@
 
     # Context menu.
     context = ctrl+shift+period
-
+[frame]
+	width=5
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
@@ -247,7 +248,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#373b41"
+    background = "#282a2e"
     foreground = "#f5f8f6"
 #    foreground = "#198844"
     frame_color = "#969896""

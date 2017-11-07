@@ -6,27 +6,14 @@ screenchange-reload = false
 
 
 [colors]
-background 	= #282a2e
+background 	= #1d1f21
 foreground 	= #eceff1
-u_foreground	= #90a4ae
+u_foreground= #90a4ae
 colour_1 = #707880
 colour_2 = #5F819D
 colour_3 = #CC6666
 colour_4 = #969896
-colour_5 = #373b41
-
-
-#[colors]
-#background = #ee2f343f
-#background-alt = #f72f343f
-#foreground = #f3f4f5
-#foreground-alt = #f3f4f5
-#foreground-dim = #676e7d
-#primary = #ffb52a
-#secondary = #e60053
-#alert = #ff6600
-#high = #268bd2
-#high-alt = #0c2b41
+colour_5 =  #282a2e
 
 [bar/top]
 
@@ -55,10 +42,8 @@ font-0 = "FontAwesome:fontformat=truetype:size=10;1"
 #font-1 = "SFNS Display:fontformat=truetype:size=10:antialias=true;1"
 font-1 = "Noto Sans:fontformat=truetype:size=10:antialias=true;1"
 font-2 = "Material Icons:fontformat=truetype:size=10;2"
-font-3 = "Material Design Icons:fontformat=truetype:size=10;1"
-#font-2 = Hack:fontformat=truetype:size=9;1
 
-modules-left = i3 xwindow 
+modules-left = i3 xwindow
 modules-center = music mpd
 modules-right =  wired-network memory volume powermenu date
 
@@ -174,13 +159,12 @@ label-warn-foreground = ${colors.colour_3}
 
 [module/powermenu]
 type = custom/menu
-
 format-spacing = 1
 
-label-open =  Power
+label-open =   Power
 label-open-background = ${colors.background}
 label-open-foreground = ${colors.foreground}
-label-close = 
+label-close = 
 label-close-background = ${colors.background}
 label-close-foreground = ${colors.foreground}
 label-separator = " "
@@ -276,21 +260,20 @@ interval = 2
 type = internal/network
 interface = eno1
 interval = 2.0
-#label-connected = 
 
-label-connected = 
-label-disconnected = 
-label-connected-font = 4
-label-disconnected-font = 4
+label-connected = 
+label-disconnected = 
+label-connected-font = 3
+label-disconnected-font = 3
 label-disconnected-foreground = #66
 
 [module/memory]
 type = internal/memory
-label =   %percentage_used%%
+#label-font = 3
+label =   %percentage_used%% 
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
-
 
 #[module/mpd]
 #type = internal/mpd

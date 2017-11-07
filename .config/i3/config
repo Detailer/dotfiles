@@ -17,8 +17,9 @@ new_window pixel 3
 #GAPS
 gaps inner 20
 gaps outer 0
-smart_gaps on
-#workspace 2 gaps inner 0
+#smart_gaps on
+workspace 2 gaps inner 0
+workspace 2 gaps outer 0
 
 #BORDER
 #for_window [class="^.*"] border pixel
@@ -144,6 +145,7 @@ set $workspace10 "10"
 # Bind applciiations to workspaces
 assign [class="Firefox"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Gsimplecal" instance="gsimplecal"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -202,9 +204,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#set $bg-color 	         #455a64
-set $bg-color 	         #373b41
-#set $inactive-bg-color   1#2f343f
+
+set $bg-color           #373b41
 set $inactive-bg-color   #282a2e
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -217,8 +218,6 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
 
-#client.focused            #232323 #181818 #bdb8c1 #4F4F4F #0e0d0e
-#client.focused_inactive #1A1A1A #181818 #424242 #121212 #0d010d
 
 hide_edge_borders both
 
