@@ -25,12 +25,9 @@ workspace 2 gaps outer 0
 #for_window [class="^.*"] border pixel
 # border / titlebar
 
-
-
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:San Francisco Display 8
+font pango:Noto Sans 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -309,16 +306,18 @@ mode "$mode_gaps_outer" {
 exec i3-config-wizard
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id gnome-settings-daemon
-exec_always --no-startup-id feh --bg-scale Pictures/walls/39.jpg
+exec_always --no-startup-id feh --bg-scale Pictures/walls/42.png
 #exec_always --no-startup-id hsetroot -solid "#212121"
 exec firefox
 exec --no-startup-id compton --config ~/.config/compton.conf -b -f
 #exec_always xmodmap ~/.xmodmap
 exec_always --no-startup-id LANG=en_us.UTF-8
 #exec spotify
-#exec --no-startup-id ~/scripts/blurme
+#exec_always --no-startup-id ~/scripts/blurme
 
 bindsym --release Print exec ~/scripts/screenshot.sh
+bindsym --release Shift+Print exec ~/scripts/screenshot-copy.sh
+
 bindcode $mod+86 exec "pactl set-sink-volume 1 +5%"
 bindcode $mod+82 exec "pactl set-sink-volume 1 -5%"
 bindsym $mod+Shift+X exec ~/scripts/lock.sh

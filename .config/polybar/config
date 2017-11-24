@@ -45,7 +45,7 @@ font-2 = "Material Icons:fontformat=truetype:size=10;2"
 
 modules-left = i3 xwindow
 modules-center = music mpd
-modules-right =  wired-network memory volume powermenu date
+modules-right =  wired-network memory volume powermenu calendar date
 
 tray-position = right
 tray-padding = 3
