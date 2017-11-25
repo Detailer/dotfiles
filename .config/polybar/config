@@ -9,6 +9,7 @@ screenchange-reload = false
 background 	= #1d1f21
 foreground 	= #eceff1
 u_foreground= #90a4ae
+u_foreground2=#DB2D20
 colour_1 = #707880
 colour_2 = #5F819D
 colour_3 = #CC6666
@@ -41,7 +42,7 @@ module-margin-right = 2.5
 font-0 = "FontAwesome:fontformat=truetype:size=10;1"
 #font-1 = "SFNS Display:fontformat=truetype:size=10:antialias=true;1"
 font-1 = "Noto Sans:fontformat=truetype:size=10:antialias=true;1"
-font-2 = "Material Icons:fontformat=truetype:size=10;2"
+font-2 = "Material Icons:fontformat=truetype:size=10;1"
 
 modules-left = i3 xwindow
 modules-center = music mpd
@@ -161,7 +162,7 @@ label-warn-foreground = ${colors.colour_3}
 type = custom/menu
 format-spacing = 1
 
-label-open =   Power
+label-open = %{F#DB2D20}%{F-}  Power
 label-open-background = ${colors.background}
 label-open-foreground = ${colors.foreground}
 label-close = 
