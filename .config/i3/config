@@ -315,8 +315,7 @@ exec_always --no-startup-id LANG=en_us.UTF-8
 #exec spotify
 #exec_always --no-startup-id ~/scripts/blurme
 
-bindsym --release Print exec ~/scripts/screenshot.sh
-bindsym --release Shift+Print exec ~/scripts/screenshot-copy.sh
+bindsym --release Print exec --no-startup-id ~/scripts/screenshot.sh
 
 bindcode $mod+86 exec "pactl set-sink-volume 1 +5%"
 bindcode $mod+82 exec "pactl set-sink-volume 1 -5%"
