@@ -143,6 +143,7 @@ set $workspace10 "10"
 assign [class="Firefox"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Gsimplecal" instance="gsimplecal"] floating enable
+for_window [class="Eog"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1

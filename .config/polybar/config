@@ -9,9 +9,7 @@ screenchange-reload = false
 background 	= #1d1f21
 foreground 	= #eceff1
 u_foreground= #90a4ae
-u_foreground2=#DB2D20
 colour_1 = #707880
-colour_2 = #5F819D
 colour_3 = #CC6666
 colour_4 = #969896
 colour_5 =  #282a2e
@@ -21,7 +19,7 @@ colour_5 =  #282a2e
 top =true
 ;bottom = true
 width = 100%
-height = 25
+height = 30
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -165,7 +163,7 @@ format-spacing = 1
 label-open = %{F#DB2D20}%{F-}  Power
 label-open-background = ${colors.background}
 label-open-foreground = ${colors.foreground}
-label-close = 
+label-close = %{F#DB2D20}%{F-}
 label-close-background = ${colors.background}
 label-close-foreground = ${colors.foreground}
 label-separator = " "
@@ -256,6 +254,7 @@ port = 6600
 ; Seconds to sleep between progressbar/song timer sync
 ; Default: 1
 interval = 2
+
 
 [module/wired-network]
 type = internal/network
