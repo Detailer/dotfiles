@@ -6,13 +6,13 @@ screenchange-reload = false
 
 
 [colors]
-background 	= #1d1f21
+background 	= #CC1d1f21
 foreground 	= #eceff1
-u_foreground= #90a4ae
-colour_1 = #707880
-colour_3 = #CC6666
-colour_4 = #969896
-colour_5 =  #282a2e
+u_foreground	= #90a4ae
+colour_1 	= #707880
+colour_3 	= #CC6666
+colour_4 	= #969896
+colour_5 	= #282a2e
 
 [bar/top]
 
@@ -38,13 +38,12 @@ module-margin-left = 2.5
 module-margin-right = 2.5
 
 font-0 = "FontAwesome:fontformat=truetype:size=10;1"
-#font-1 = "SFNS Display:fontformat=truetype:size=10:antialias=true;1"
 font-1 = "Noto Sans:fontformat=truetype:size=10:antialias=true;1"
 font-2 = "Material Icons:fontformat=truetype:size=10;1"
 
 modules-left = i3 xwindow
 modules-center = music mpd
-modules-right =  wired-network memory volume powermenu calendar date
+modules-right =  wired-network memory volume powermenu date
 
 tray-position = right
 tray-padding = 3
@@ -61,7 +60,6 @@ override-redirect = false
 [module/i3]
 type = internal/i3
 
-#ws-icon-0 = 1;
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-3 =  3;
@@ -72,16 +70,12 @@ label-mode = %mode%
 label-mode-padding = 2
 label-mode-background = ${colors.colour_1}
 
-#label-focused = %index%:%icon%
-#label-focused = 
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.colour_4}
 label-focused-padding = 2
 
-#label-unfocused = %index%:%icon%
-#label-unfocused =  
 label-unfocused = %icon%
 label-unfocused-padding = 2
 label-unfocused-background = ${colors.background}
@@ -91,12 +85,9 @@ label-visible = %index%;%icon%
 label-visible-underline = ${colors.foreground}
 label-visible-padding = 3
 
-#label-urgent = %index%:%icon%
-#label-urgent = 
 label-urgent = %icon%
 label-urgent-foreground = ${colors.colour_3}
 label-urgent-background = ${colors.background}
-#label-urgent-underline = ${colors.colour_3}
 label-urgent-padding = 2
 
 [module/xwindow]
@@ -104,6 +95,7 @@ type = internal/xwindow
 label-background = ${colors.colour_5}
 label-padding-left = 3
 label-padding-right = 3
+label-maxlen = 50
 
 [module/date]
 type = internal/date
@@ -115,11 +107,11 @@ format-underline = ${colors.colour_4}
 
 label = %date%, %time%
 
-date = "%a %B %d"
-date-alt = "%d-%m-%Y"
+date-alt = "%a %B %d"
+date = "%d-%m-%Y"
 
+time-alt = "%I:%M %p"
 time = "%I:%M %p"
-time-alt = "%H:%M"
 
 [module/volume]
 type = internal/volume
@@ -130,19 +122,6 @@ format-muted-foreground = #66
 format-volume =   <label-volume> 
 label-muted-font = 3
 label-muted =  
-
-
-
-#bar-volume-width = 15
-#bar-volume-foreground = ${colors.foreground}
-#bar-volume-gradient = false
-#bar-volume-indicator= 
-#bar-volume-indicator-font = 1
-#bar-volume-fill = ─
-#bar-volume-fill-font = 1
-#bar-volume-empty = ─
-#bar-volume-empty-font = 1
-#bar-volume-empty-foreground = ${colors.colour_2}
 
 [module/temperature]
 type = internal/temperature
@@ -180,32 +159,6 @@ menu-0-2-exec = shutdown now
 margin-top = 5
 margin-bottom = 5
 
-[module/battery]
-type = internal/battery
-full-at = 100
-
-battery = BAT0
-adapter = AC
-poll-interval = 5
-
-time-format = %H:%M
-
-format-charging = Charging: <label-charging>
-format-discharging = Discharging: <label-discharging>
-format-full = Battery: <label-full>
-
-format-charging-foreground = ${colors.colour_1}
-format-discharging-foreground = ${colors.colour_1}
-format-full-foreground = ${colors.colour_1}
-
-label-charging = %percentage%%
-label-discharging = %percentage%%
-label-full = Fully charged
-
-label-charging-foreground = ${colors.foreground}
-label-discharging-foreground = ${colors.foreground}
-label-full-foreground = ${colors.foreground}
-
 [module/wireless-network]
 type = internal/network
 interface = wlp2s0
@@ -222,22 +175,6 @@ label-connected-foreground = ${colors.foreground}
 label-disconnected = (None)
 label-disconnected-foreground = ${colors.foreground}
 
-[module/vpn]
-type = internal/network
-interface = eno1
-
-interval = 5.0
-accumulate-stats = true
-format-connected = VPN: <label-connected>
-format-connected-foreground = ${colors.colour_1}
-format-disconnected = <label-disconnected>
-
-label-connected = Connected
-label-connected-foreground = ${colors.foreground}
-
-label-disconnected = (None)
-label-disconnected-foreground = ${colors.foreground}
-
 #Spotify current song display
 [module/music]
 type = custom/script
@@ -245,6 +182,7 @@ interval = 2
 label = %output:0:45:...%
 exec = ~/.config/polybar/mpris.sh
 
+#Current MPD playing
 [module/mpd]
 type = internal/mpd
 host = 127.0.0.1
@@ -274,35 +212,4 @@ label =   %percentage_used%%
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
-
-#[module/mpd]
-#type = internal/mpd
-
-#format-online = <toggle>   <label-song>    [ <label-time>  ]
-
-#label-song = %title% - %artist%
-#label-song-maxlen = 25
-#label-song-ellipsis = true
-
-#icon-prev = 
-#icon-seekb = 
-#icon-stop = 
-#icon-play = 
-#icon-pause = 
-#icon-next = 
-#icon-seekf = 
-#icon-random = 
-#icon-repeat = 
-
-#format-prefix-foreground = ${colors.foreground}
-#format-online-underline = ${colors.colour_1}
-
-
-#;toggle-on-foreground = ${colors.primary}
-#;toggle-off-foreground = #66
-
-#;format-online-prefix = " "
-#format-online-underline = #20dfdf
-#format-online-background = #0d5959
-#format-online-padding = 2
 

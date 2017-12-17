@@ -203,7 +203,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-set $bg-color           #373b41
+set $bg-color            #373b41
 set $inactive-bg-color   #282a2e
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -307,12 +307,13 @@ mode "$mode_gaps_outer" {
 exec i3-config-wizard
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id gnome-settings-daemon
-exec_always --no-startup-id feh --bg-scale Pictures/walls/42.png
+exec_always --no-startup-id feh --bg-scale Pictures/walls/65.png
 #exec_always --no-startup-id hsetroot -solid "#212121"
 exec firefox
 exec --no-startup-id compton --config ~/.config/compton.conf -b -f
 #exec_always xmodmap ~/.xmodmap
 exec_always --no-startup-id LANG=en_us.UTF-8
+exec --no-startup-id ~/scripts/lock.sh -u ~/Pictures/walls/44.jpg
 #exec spotify
 #exec_always --no-startup-id ~/scripts/blurme
 
@@ -320,7 +321,7 @@ bindsym --release Print exec --no-startup-id ~/scripts/screenshot.sh
 
 bindcode $mod+86 exec "pactl set-sink-volume 1 +5%"
 bindcode $mod+82 exec "pactl set-sink-volume 1 -5%"
-bindsym $mod+Shift+X exec ~/scripts/lock.sh
+bindsym $mod+Shift+X exec ~/scripts/lock.sh -l dim
 
 # Spotify related key bindings
 bindsym $mod+Ctrl+P exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
