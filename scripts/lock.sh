@@ -151,7 +151,7 @@ case "$1" in
         i3lock \
         -n -i "$l_dim" \
         --timepos="x-120:h-ch+30" \
-        --datepos="tx+10:ty+25" \
+        --datepos="tx+5:ty+25" \
         --clock --timestr="%H:%M" \
         --insidecolor=00000000 --ringcolor=ffffffff --line-uses-inside \
         --keyhlcolor=d23c3dff --bshlcolor=d23c3dff --separatorcolor=00000000 \

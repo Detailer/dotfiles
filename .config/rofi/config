@@ -3,47 +3,24 @@
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-!                  BG		FG		BG Alt    	HIL BG       HIl FG
-#rofi.color-window: #263238,	#263238, 	#F2263238
-#rofi.color-normal: #263238,	#eceff1, 	#F2263238,   	#607d8b,     #eceff1
-#rofi.color-active: #263238, 	#bf360c, 	#F2263238,   	#607d8b,     #eceff1
-#rofi.color-urgent: #263238, 	#e8e8e8, 	#F2263238,   	#607d8b,     #eceff1
-
-!                  BG		FG		BG Alt    	HIL BG       HIl FG
-rofi.color-window: #02111b,	#fcfcfc, 	#02111b,
+!                  BG			FG		BG Alt    	HIL BG      HIl FG
+rofi.color-window: #02111b,	#ccccc6, 	#02111b,	
 rofi.color-normal: #02111b,	#fcfcfc, 	#02111b,   	#F202111b,     #1f7a8c
-rofi.color-active: #02111b, 	#ff5e5b, 	#02111b,   	#F202111b,     #1f7a8c
-rofi.color-urgent: #02111b, 	#ff5e5b, 	#02111b,   	#F202111b,     #1f7a8c
+rofi.color-active: #02111b, #ff5e5b, 	#02111b,   	#F202111b,     #1f7a8c
+rofi.color-urgent: #02111b, #ff5e5b, 	#02111b,   	#F202111b,     #1f7a8c
 
-#Xcursor.theme: Breeze-White
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-#rofi.color-enabled: true
-#rofi.color-window: #002b37, #002b37, #003642
-#rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
-#rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
-#rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
-
-
-#rofi.fullscreen: true
-#rofi.lines: 5
-#rofi.padding: 400
-
-
-#rofi.color-window: #211716, #211716, #211716
-#rofi.color-normal: #211716, #fae8a4, #211716, #fae8a4, #211716
-#rofi.color-active: #406158, #fae8a4, #406158, #fae8a4, #211716
-#rofi.color-urgent: #a26a5b, #fae8a4, #a26a5b, #fae8a4, #211716
-
+rofi.width: 40%
 rofi.columns: 1
-rofi.font: mplus 14
+rofi.yoffset: 0
+
+rofi.font: Input Sans 12.75
 rofi.fake-transparency: true
 rofi.hide-scrollbar: true
 rofi.disable-history: true
-rofi.bw: 0
-rofi.fullscreen: true
+rofi.bw: 2
+rofi.fullscreen: false
 rofi.lines: 5
-rofi.padding: 400
+
+
+rofi.padding: 40
 rofi.separator-style: none
