@@ -50,7 +50,7 @@ font-2 = "Material Icons:fontformat=truetype:size=10;1"
 
 modules-left = i3 xwindow
 modules-center = music mpd
-modules-right =  memory wired-network volume powermenu date
+modules-right = memory wired-network volume powermenu date
 
 tray-position = right
 tray-padding = 0
